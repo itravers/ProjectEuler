@@ -9,25 +9,28 @@
 public class Problem7 {
 	public static void main(String [] args){
 		int nth = 0;
-		int i = 2;
+		long q = 1;
 		long prime = 0;
-		while(nth < 10000){
-			if(isPrime(i, i-1)){
-				prime = i;
+		while(nth < 10001){
+			if(isPrime(q)){
+				prime = q;
 				nth++;
+				//System.out.println("Prime: " + prime);
 			}
-			i++;
+			q++;
 		}
-		System.out.println("nth: " + nth + " prime: " + prime);
+		System.out.println("nth: " + (nth) + " prime: " + prime);
+		System.out.println("Answer: " + prime);
 	}
 	
-	static boolean isPrime(long i, long i2) {
-        if(i2 <= 1) {
-            return true;
-        }
-        if(i % i2 == 0) {
-            return false;
-        }
-        return isPrime(i, i2-1);
-    }
+	static boolean isPrime(long n) {
+	    if(n < 2) return false;
+	    if(n == 2 || n == 3) return true;
+	    if(n%2 == 0 || n%3 == 0) return false;
+	    long sqrtN = (long)Math.sqrt(n)+1;
+	    for(long i = 6L; i <= sqrtN; i += 6) {
+	        if(n%(i-1) == 0 || n%(i+1) == 0) return false;
+	    }
+	    return true;
+	}
 }

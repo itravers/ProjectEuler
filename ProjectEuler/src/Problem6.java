@@ -17,17 +17,21 @@ public class Problem6 {
 		long squareOfSums = getSquareOfSums();
 		long diff = Math.abs(sumOfSquares - squareOfSums);
 		System.out.println("Answer: " + diff);
-		
-		
 	}
 
 	private static long getSquareOfSums() {
-		// TODO Auto-generated method stub
-		return 0;
+		long sum = 0;
+		for(int i = 1; i <= 100; i++){
+			sum += (i*i);
+		}
+		return sum;
 	}
 
 	private static long getSumOfSquares() {
-		// TODO Auto-generated method stub
-		return 0;
+		long sum = 0;
+		for(int i = 1; i <= 100; i++){
+			sum += i;
+		}
+		return (sum*sum);
 	}
 }

@@ -14,12 +14,12 @@ public class Problem3 {
 			if(num % i == 0){
 				System.out.println("Factor: " + i);
 				try {
-					Thread.sleep(10000);
+					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				if(isPrime(i, i)){
+				if(isPrime(i, i-1)){
 					System.out.println("Prime Factor: "+ i);
 				}
 			}

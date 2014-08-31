@@ -17,12 +17,17 @@ public class Problem2 {
 		int val = 0;
 		int first = 1;
 		int second = 2;
-		while(val <= limit){
+		do{
 			val = first + second;
+			
 			first = second;
 			second = val;
-			if(val % 2 == 0) sum += val;
-		}
+			if(val % 2 == 0 && val < limit){
+				System.out.println(val);
+				sum += val;
+			}
+			sum+=2;
+		}while(val <= limit);
 		System.out.println("Answer: " + sum);
 	}
 }

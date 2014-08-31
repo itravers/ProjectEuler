@@ -18,7 +18,7 @@ public class Problem1 {
 	}
 
 	private static boolean isMultipleOf3Or5(int i) {
-		if(i % 3 == 0 | i % 5 == 0){
+		if(i % 3 == 0 || i % 5 == 0){
 			return true;
 		}else{
 			return false;

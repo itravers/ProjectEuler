@@ -8,5 +8,25 @@
  * @author Isaac Assegai
  */
 public class Problem5 {
-
+	public static void main(String[]args){
+		int num = 0;
+		boolean answerFound = false;
+		while(!answerFound){
+			num++;
+			for(int i = 0; i < 20; i++){
+				if(num % i == 0){
+					answerFound = true;
+				}else{
+					answerFound = false;
+					break;
+				}
+			}
+		}
+		if(answerFound){
+			System.out.println("Answer: " + num);
+		}else{
+			System.out.println("No Answer Found");
+		}
+		
+	}
 }

@@ -7,5 +7,21 @@
  * @author Isaac Assegai
  */
 public class Problem1 {
+	public static void main(String [] args){
+		int sum = 0;
+		for(int i = 0; i < 1000; i++){
+			if(isMultipleOf3Or5(i)){
+				sum += i;
+			}
+		}
+		System.out.println("Answer: " + sum);
+	}
 
+	private static boolean isMultipleOf3Or5(int i) {
+		if(i % 3 == 0 | i % 5 == 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }

@@ -27,13 +27,13 @@ public class Problem4 {
 			
 		}
 		Collections.sort(palindromeList);
-		System.out.println(palindromeList.get(palindromeList.size()-1));
+		System.out.println("Answer: " + palindromeList.get(palindromeList.size()-1));
 		
 	}
 	
 	 boolean isPalindrome(int a, int b){
 		boolean returnVal = false;
-		System.out.println(a + " + " + b + " = " + (a*b));
+		//System.out.println(a + " + " + b + " = " + (a*b));
 		if(isPalindrome(a*b)){
 			
 			returnVal = true;
@@ -41,7 +41,7 @@ public class Problem4 {
 			for(int i = 999; i > 0; i--){
 				for(int j = 999; j > 0; j--){
 					if(isPalindrome(i*j)){
-						System.out.println("PalinDrome: " + (i*j));
+						//System.out.println("PalinDrome: " + (i*j));
 						palindromeList.add(i*j);
 						
 					}
@@ -49,7 +49,7 @@ public class Problem4 {
 				
 			}
 		}
-		System.out.println( " : " + returnVal);
+		//System.out.println( " : " + returnVal);
 		return returnVal;
 	}
 	

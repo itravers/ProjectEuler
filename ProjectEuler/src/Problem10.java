@@ -18,7 +18,7 @@ public class Problem10 {
 	private static long sumSet(ArrayList primes) {
 		long sum = 0;
 		for(int i = 0; i < primes.size(); i++){
-			sum += (int)primes.get(i);
+			sum += (long)primes.get(i);
 		}
 		return sum;
 	}

@@ -55,10 +55,12 @@ public class Problem8 {
 		System.out.println("Answer: " + greatestProduct);
 	}
 
-	private static long getGreatestProduct(String string, int adjacentDigits) {
+	private static long getGreatestProduct(String s, int adjacentDigits) {
 		int startDigit = 0;
 		int endDigit = adjacentDigits;
+		String subString = s.substring(startDigit, endDigit);
+		System.out.println(subString);
 		
-		return 1;
+		return 1L;
 	}
 }

@@ -22,6 +22,7 @@ public class Problem9 {
 				for(int c = (b+1); c <= goalNum; c++){
 					if(((a+b+c)) == goalNum  && ((a*a)+(b*b) == (c*c))){
 						product = a*b*c;
+						System.out.println("a: "+ a + " b: " + b + " c: " + c);
 					}
 				}
 			}

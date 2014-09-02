@@ -29,8 +29,8 @@
  */
 public class Problem8 {
 	public static void main(String [] args){
-		int adjacentDigits = 8;
-		args[0] = "73167176531330624919225119674426574742355349194934" +
+		int adjacentDigits = 13;
+  String series = "73167176531330624919225119674426574742355349194934" +
 				  "96983520312774506326239578318016984801869478851843" +
 				  "85861560789112949495459501737958331952853208805511" +
 				  "12540698747158523863050715693290963295227443043557" +
@@ -51,16 +51,31 @@ public class Problem8 {
 				  "05886116467109405077541002256983155200055935729725" +
 				  "71636269561882670428252483600823257530420752963450";
 		
-		long greatestProduct = getGreatestProduct(args[0], adjacentDigits);
+		long greatestProduct = getGreatestProduct(series, adjacentDigits);
 		System.out.println("Answer: " + greatestProduct);
 	}
 
 	private static long getGreatestProduct(String s, int adjacentDigits) {
 		int startDigit = 0;
 		int endDigit = adjacentDigits;
-		String subString = s.substring(startDigit, endDigit);
-		System.out.println(subString);
-		
-		return 1L;
+		long greatestProduct = 0;
+		while(endDigit < s.length()){
+			String subString = s.substring(startDigit, endDigit);
+			long product = getProduct(subString);
+			if(product > greatestProduct) greatestProduct = product;
+			startDigit++;
+			endDigit++;
+		}
+		return greatestProduct;
+	}
+
+	private static long getProduct(String s) {
+		long product = 1;
+		for(int i = 0; i < s.length(); i ++){
+			String c = s.substring(i, i+1);
+			int value = Integer.valueOf(c);
+			product *= value;
+		}
+		return product;
 	}
 }
